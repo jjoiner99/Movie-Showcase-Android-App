@@ -24,6 +24,7 @@ import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private ArrayList<String> movieList;
+    private int[] postersList;
     private RVClick RVListener;
     private Context context;
 
@@ -40,8 +41,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             "https://en.wikipedia.org/wiki/Elem_Klimov", "https://en.wikipedia.org/wiki/John_Carpenter", "https://en.wikipedia.org/wiki/George_Miller_(filmmaker)",
             "https://en.wikipedia.org/wiki/John_Carpenter", "https://en.wikipedia.org/wiki/Kenny_Ortega");
 
-    public MyAdapter(ArrayList<String> theList, RVClick listener){
+    public MyAdapter(ArrayList<String> theList, int[] posters, RVClick listener){
         movieList = theList;
+        postersList = posters;
         this.RVListener = listener;
     }
 
@@ -59,6 +61,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.name.setText(movieList.get(position));
+        holder.image.setImageResource(postersList[position]);
     }
 
     @Override

@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity implements RVClick{
     List<String> dirList = Arrays.asList("https://en.wikipedia.org/wiki/Greg_Mottola", "https://en.wikipedia.org/wiki/Pete_Docter", "https://en.wikipedia.org/wiki/Martin_Scorsese",
             "https://en.wikipedia.org/wiki/Elem_Klimov", "https://en.wikipedia.org/wiki/John_Carpenter", "https://en.wikipedia.org/wiki/George_Miller_(filmmaker)",
             "https://en.wikipedia.org/wiki/John_Carpenter", "https://en.wikipedia.org/wiki/Kenny_Ortega");
+    int[] postersList = {R.drawable.superbad, R.drawable.up, R.drawable.goodfellas, R.drawable.comeandsee, R.drawable.halloween,
+            R.drawable.madmax, R.drawable.thething, R.drawable.hocuspocus};
 
 
 
@@ -61,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements RVClick{
             Toast.makeText(this,name.getText(),Toast.LENGTH_SHORT).show();
         };
 
-        MyAdapter adapter = new MyAdapter(myList, listener);
+        MyAdapter adapter = new MyAdapter(myList, postersList, listener);
         movieView.setHasFixedSize(true);
         movieView.setAdapter(adapter);
         movieView.setLayoutManager(new LinearLayoutManager(this)); //List
