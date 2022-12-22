@@ -119,17 +119,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             menu.getItem(0).setOnMenuItemClickListener(onMenu);
             menu.getItem(1).setOnMenuItemClickListener(onMenu);
             menu.getItem(2).setOnMenuItemClickListener(onMenu);
-
-          /*  //create menu in code
-
-            menu.setHeaderTitle("My context menu");
-
-            //add menu items and set the listener for each
-            menu.add(0,v.getId(),0,"option 1").setOnMenuItemClickListener(onMenu);
-            menu.add(0,v.getId(),0,"option 2").setOnMenuItemClickListener(onMenu);
-            menu.add(0,v.getId(),0,"option 3").setOnMenuItemClickListener(onMenu);
-            */
-
         }
 
         /*
